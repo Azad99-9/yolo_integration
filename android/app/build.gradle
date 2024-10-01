@@ -38,10 +38,11 @@ android {
         applicationId = "com.example.integrate_ml_model"
         // You can update the following values to match your application needs.
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
-        minSdk = flutter.minSdkVersion
+        minSdkVersion 26
         targetSdk = flutter.targetSdkVersion
         versionCode = flutterVersionCode.toInteger()
         versionName = flutterVersionName
+        multiDexEnabled true
     }
 
     buildTypes {
@@ -51,6 +52,15 @@ android {
             signingConfig = signingConfigs.debug
         }
     }
+
+    aaptOptions {
+        noCompress 'tflite'
+        noCompress 'lite'
+    }
+}
+
+dependencies {
+    implementation 'androidx.multidex:multidex:2.0.1'
 }
 
 flutter {

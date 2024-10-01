@@ -38,15 +38,23 @@ dependencies:
   permission_handler: ^11.3.1
   path_provider: ^2.1.4
   plugin_platform_interface: ^2.1.8
-  flutter_vision: ^1.1.4
-  camera: ^0.11.0+2
-  flutter_speed_dial: ^7.0.0
+  # tflite: ^1.1.2
   image_picker: ^1.1.2
+  path: ^1.9.0
+  camera: ^0.11.0+2
   camera_android_camerax: ^0.6.8+3
   camera_avfoundation: ^0.9.17+3
   camera_platform_interface: ^2.8.0
+  cross_file: ^0.3.4+2
+  stream_transform: ^2.1.0
   camera_web: ^0.3.5
   flutter_plugin_android_lifecycle: ^2.0.22
+  flutter_speed_dial: ^7.0.0
+  image: ^3.0.1
+  ultralytics_yolo: ^0.0.3
+  # tflite_v2: ^1.0.0
+  # ultralytics_yolo: ^0.0.3
+  flutter_vision: ^1.1.4
 
 dev_dependencies:
   flutter_test:
@@ -72,7 +80,9 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/models/
+    - assets/face_detector_yolo_int8.tflite
+    - assets/yolo5.tflite
+    - assets/labels.txt
     # - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
